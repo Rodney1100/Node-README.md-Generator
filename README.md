@@ -1,39 +1,25 @@
 
-        # 1
+#  README.md Generator
 
-        ## Description
-        1
+## Description
+this project create a README.md file
 
-        ## Table of Contents
-        *[Description](#description) 
-        *[Installation](#installation) 
-        *[Usage](#usage) 
-        *[License](#license) 
-        *[Contributing](#contributing) 
-        *[Tests](#credits) 
-        *[License](#test) 
-        *[Question](#questions)
+## Table of Contents
+*[Description](#description) 
+*[Installation](#installation) 
+*[Usage](#usage) 
+*[License](#license) 
+*[Contributing](#contributing) 
+*[Tests](#credits) 
+*[License](#test) 
+*[Question](#questions)
 
+## Usage
+to create a README.md file
 
-        ## Installation
-        41
+## Contribution
+rodney1100
 
-        ## Usage
-        1
-
-
-        
-        ## License
-        Apache
-        https: //choosealicense.com/
-
-
-        ## Contribution
-        2
-
-        ## Test
-        1
-
-        ## Questions
-        href="https://github.com/rodney1100">GitHub</a>
+## Questions
+href="https://github.com/rodney1100"
         

@@ -23,9 +23,9 @@ function renderLicenseLink(license) {
 function renderLicenseSection(license) {
     if (license) {
         return `
-        ## License
-        ${ renderLicenseBadge(license) }
-        ${ renderLicenseLink(license) }`
+## License
+${ renderLicenseBadge(license) }
+${ renderLicenseLink(license) }`
     } else {
         // If there is no license, return an empty string
         return ' ';
@@ -34,7 +34,7 @@ function renderLicenseSection(license) {
 
 function contactInfo(questions) {
     if (questions) {
-        return `href="https://github.com/${questions}">GitHub</a>`;
+        return `href="https://github.com/${questions}"`;
     }
 }
 
@@ -51,39 +51,39 @@ module.exports = generateMarkdown => {
         tests,
     } = generateMarkdown;
     return `
-        # ${proName}
+# ${proName}
 
-        ## Description
-        ${description}
+## Description
+${description}
 
-        ## Table of Contents
-        *[Description](#description) 
-        *[Installation](#installation) 
-        *[Usage](#usage) 
-        *[License](#license) 
-        *[Contributing](#contributing) 
-        *[Tests](#credits) 
-        *[License](#test) 
-        *[Question](#questions)
-
-
-        ## Installation
-        ${installation}
-
-        ## Usage
-        ${usage}
+## Table of Contents
+*[Description](#description) 
+*[Installation](#installation) 
+*[Usage](#usage) 
+*[License](#license) 
+*[Contributing](#contributing) 
+*[Tests](#credits) 
+*[License](#test) 
+*[Question](#questions)
 
 
-        ${renderLicenseSection(license)}
+## Installation
+${installation}
+
+## Usage
+${usage}
 
 
-        ## Contribution
-        ${contributing}
+${renderLicenseSection(license)}
 
-        ## Test
-        ${tests}
 
-        ## Questions
-        ${contactInfo(questions)}
+## Contribution
+${contributing}
+
+## Test
+${tests}
+
+## Questions
+${contactInfo(questions)}
         `;
 };
