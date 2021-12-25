@@ -2,7 +2,8 @@
 
 function renderLicenseBadge(license) {
     if (license) {
-        return `${license.join(", ")}`;
+        return `${license.join(", ")}    
+            `;
     } else {
         // If there is no license, return an empty string
         return ' ';
@@ -12,11 +13,13 @@ function renderLicenseBadge(license) {
 // // TODO: Create a function that returns the license link
 function renderLicenseLink(license) {
     if (license) {
-        return `https: //choosealicense.com/`;
+        return `
+        https: //choosealicense.com/`;
     } else {
         // If there is no license, return an empty string
         return ' ';
     }
+
 }
 
 // // TODO: Create a function that returns the license section of README
@@ -32,9 +35,42 @@ ${ renderLicenseLink(license) }`
     }
 }
 
+function licenseSectionlink(license) {
+    if (license) {
+        return `
+*[License](#license) `;
+    } else {
+        // If there is no license, return an empty string
+        return ' ';
+    }
+}
+
+function testSectionlink(tests) {
+    if (tests) {
+        return `
+*[Tests](#tests)`;
+    } else {
+        // If there is no license, return an empty string
+        return ' ';
+    }
+}
+
+function generateTests(tests) {
+    if (tests) {
+        return `
+## Test
+${tests}`;
+    } else {
+        // If there is no test, return an empty string
+        return ' ';
+    }
+}
+
 function contactInfo(questions) {
     if (questions) {
-        return `href="https://github.com/${questions}"`;
+        return `
+## Questions
+https://github.com/${questions}`;
     }
 }
 
@@ -60,10 +96,9 @@ ${description}
 *[Description](#description) 
 *[Installation](#installation) 
 *[Usage](#usage) 
-*[License](#license) 
+${licenseSectionlink(license)}
 *[Contributing](#contributing) 
-*[Tests](#credits) 
-*[License](#test) 
+${testSectionlink(tests)}
 *[Question](#questions)
 
 
@@ -73,17 +108,13 @@ ${installation}
 ## Usage
 ${usage}
 
-
 ${renderLicenseSection(license)}
-
 
 ## Contribution
 ${contributing}
 
-## Test
-${tests}
+${generateTests(tests)}
 
-## Questions
 ${contactInfo(questions)}
-        `;
+  `;
 };
