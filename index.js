@@ -88,7 +88,7 @@ const questions = projectsData => {
         {
             type: "input",
             name: "questions",
-            message: "Questions and contact information? (required)",
+            message: "Questions for contact information? (required)",
             validate: (value) => {
                 if (value) {
                     return true;
@@ -118,10 +118,3 @@ questions().then(projectsData => {
         console.log('Page created! Check out README.md in this directory to see it!');
     });
 });
-
-
-// .then(projectsData => {
-//     fs.writeFile("README.md", generateMarkdown(projectsData), err => {
-//         if (err) throw new Error(err);
-//     });
-// });
