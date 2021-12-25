@@ -1,5 +1,5 @@
 # README.md Generator
-![picture or application](./image/Capture.PNG)
+![picture or application](./Capture.PNG)
 ## Description
 This project creates a README.md file with the proper questions
 
